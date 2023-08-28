@@ -4,26 +4,27 @@ using UnityEngine;
 
 public class HealthHandler : MonoBehaviour
 {
-    [SerializeField] private int health = 100;
+    [SerializeField] private int health = 10;
 
-    int ApplyDamage(int value)
+    public int ApplyDamage(int value)
     {
         health -= value;
 
-        if (health < 0)
+        if (health <= 0)
         {
             health = 0;
+            Destroy(gameObject);
         }
 
         return health;
     }
 
-    int GetHealth()
+    public int GetHealth()
     {
         return health;
     }
 
-    int HealPlayer(int value)
+    public int HealPlayer(int value)
     {
         health += value;
         

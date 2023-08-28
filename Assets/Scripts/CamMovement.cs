@@ -6,7 +6,6 @@ public class CamMovement : MonoBehaviour
 {
     [SerializeField] private Transform player;
     public bool camMoving = true;
-    [SerializeField] private float smoothSpeed = 0.25f;
 
     void Update()
     {
@@ -14,9 +13,7 @@ public class CamMovement : MonoBehaviour
         {
             Vector3 target = new Vector3(player.position.x, transform.position.y, transform.position.z);
 
-            Vector3 smoothedPosition = Vector3.Lerp(transform.position, target, smoothSpeed);
-
-            transform.position = smoothedPosition;
+            transform.position = target;
         }
     }
 }

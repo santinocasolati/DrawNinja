@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &36318834 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 791823709487329312, guid: 51fd0c057cb3da44b83305a9deaf5d43, type: 3}
+  m_PrefabInstance: {fileID: 2816081920739409661}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &511016712
 GameObject:
   m_ObjectHideFlags: 0
@@ -201,7 +206,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 511016712}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.6713035, y: -4.5, z: 0}
+  m_LocalPosition: {x: 0.05, y: -4.5, z: 0}
   m_LocalScale: {x: 24.075, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -367,7 +372,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1619921188}
   camMoving: 1
-  smoothSpeed: 0.015
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -405,7 +409,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: 00000000bf5fc68c7927000093e1b0dda346b481
+  m_ApplyToSortingLayers: 00000000bf5fc68c7927000093e1b0dda346b481f97e21c0
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -450,11 +454,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1082633358 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8068574433089355811, guid: 51fd0c057cb3da44b83305a9deaf5d43, type: 3}
-  m_PrefabInstance: {fileID: 2816081920739409661}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1403735920 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5180423669895941851, guid: 51fd0c057cb3da44b83305a9deaf5d43, type: 3}
@@ -511,6 +510,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6648742598833806398, guid: fce7e22554aa8054caa0401922a75cf0, type: 3}
+      propertyPath: health
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7900552817261508722, guid: fce7e22554aa8054caa0401922a75cf0, type: 3}
       propertyPath: m_Name
       value: MeleeEnemy
@@ -538,7 +541,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 2088848475540034461, guid: 56c9cdb00b7ff7d409f1421e587ee6c4, type: 3}
   gameStarted: 1
   shootTime: 0.5
-  shootPosition: {fileID: 1082633358}
+  shootPosition: {fileID: 36318834}
 --- !u!114 &1619921192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -551,7 +554,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ac4d5f94956cd74aab9a691e02f79d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 10
 --- !u!1001 &2816081920739409661
 PrefabInstance:
   m_ObjectHideFlags: 0

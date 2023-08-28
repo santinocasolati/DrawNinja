@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6329658987431177344}
   - component: {fileID: 98482457183988714}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Clothing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 6744599963397917086}
   - component: {fileID: 3309691622181838258}
   - component: {fileID: 8536575512431458212}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -115,7 +115,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3492863062404001243}
-  - {fileID: 1342722397987628925}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -176,7 +175,7 @@ GameObject:
   m_Component:
   - component: {fileID: 631421774893145933}
   - component: {fileID: 136136632691134734}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -251,37 +250,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &8068574433089355811
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1342722397987628925}
-  m_Layer: 0
-  m_Name: ShootPosition
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1342722397987628925
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8068574433089355811}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.682, y: -0.175, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6744599963397917086}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8363648541880519672
 GameObject:
   m_ObjectHideFlags: 0
@@ -292,7 +260,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3492863062404001243}
   - component: {fileID: 8859884802231417252}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -383,6 +351,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Weapon
       objectReference: {fileID: 0}
+    - target: {fileID: 2155350327489886938, guid: dfbcd9f0d958c6940ad92ef197ff8f80, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3186013679366981501, guid: dfbcd9f0d958c6940ad92ef197ff8f80, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3242203006585707748, guid: dfbcd9f0d958c6940ad92ef197ff8f80, type: 3}
       propertyPath: m_SortingOrder
       value: 1
@@ -438,6 +414,14 @@ PrefabInstance:
     - target: {fileID: 4351037762223147005, guid: dfbcd9f0d958c6940ad92ef197ff8f80, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4628444278410755933, guid: dfbcd9f0d958c6940ad92ef197ff8f80, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7664467198716224005, guid: dfbcd9f0d958c6940ad92ef197ff8f80, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dfbcd9f0d958c6940ad92ef197ff8f80, type: 3}

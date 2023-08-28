@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 9096859045762956219}
   - component: {fileID: 804253615479122101}
   - component: {fileID: 8483326111523614936}
-  m_Layer: 0
-  m_Name: Bullet
+  m_Layer: 7
+  m_Name: PlayerBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,7 +44,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -72,8 +72,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f0566f0018010c488fcae1e31a4dc76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: 5
-  player: {fileID: 6744599963397917086, guid: 51fd0c057cb3da44b83305a9deaf5d43, type: 3}
+  velocity: 10
   lifeTime: 2
 --- !u!1 &4748580043259283212
 GameObject:
@@ -85,7 +84,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6898585657889816839}
   - component: {fileID: 8392146470170120101}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
