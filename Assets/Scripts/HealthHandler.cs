@@ -24,7 +24,7 @@ public class HealthHandler : MonoBehaviour
         return health;
     }
 
-    public int HealPlayer(int value)
+    public int Heal(int value)
     {
         health += value;
         
