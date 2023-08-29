@@ -11,8 +11,12 @@ public class Healer : MonoBehaviour
 
         if (hit != null)
         {
-            hit.Heal(heal);
-            Destroy(gameObject);
+            bool healed = hit.Heal(heal);
+
+            if (healed)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }

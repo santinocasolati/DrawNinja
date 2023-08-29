@@ -5,7 +5,7 @@ using UnityEngine;
 public class HealthHandler : MonoBehaviour
 {
     [SerializeField] private int health = 10;
-    private int maxHealth;
+    public int maxHealth;
 
     private void Awake()
     {
@@ -30,15 +30,17 @@ public class HealthHandler : MonoBehaviour
         return health;
     }
 
-    public int Heal(int value)
+    public bool Heal(int value)
     {
+        bool canHeal = true;
         health += value;
         
         if (health > maxHealth)
         {
             health = maxHealth;
+            canHeal = false;
         }
 
-        return health;
+        return canHeal;
     }
 }
