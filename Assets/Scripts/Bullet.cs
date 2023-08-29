@@ -14,13 +14,7 @@ public class Bullet : MonoBehaviour
     
     private void Awake()
     {
-        if (transform.rotation.eulerAngles.y == 180)
-        {
-            dir = -1;
-        } else
-        {
-            dir = 1;
-        }
+        dir = transform.rotation.eulerAngles.y == 180 ? -1 : 1;
     }
     void Update()
     {
