@@ -502,7 +502,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7900552817261508722, guid: fce7e22554aa8054caa0401922a75cf0, type: 3}
       propertyPath: m_Name
-      value: MeleeEnemy
+      value: MeleeEnemyPA
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fce7e22554aa8054caa0401922a75cf0, type: 3}
@@ -577,7 +577,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 257654137627058358, guid: 1e06e284b5de9484e8534b6a69ca4fee, type: 3}
       propertyPath: m_Name
-      value: Healer
+      value: HealerPA
       objectReference: {fileID: 0}
     - target: {fileID: 7882984970453854159, guid: 1e06e284b5de9484e8534b6a69ca4fee, type: 3}
       propertyPath: m_RootOrder
