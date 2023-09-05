@@ -95,6 +95,9 @@ GameObject:
   - component: {fileID: 6744599963397917086}
   - component: {fileID: 3309691622181838258}
   - component: {fileID: 8536575512431458212}
+  - component: {fileID: 1352475988135797693}
+  - component: {fileID: 7710231753624777022}
+  - component: {fileID: 4801780134871445676}
   m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
@@ -156,7 +159,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 80
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -164,7 +167,50 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
+--- !u!114 &1352475988135797693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5180423669895941851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e41027f4c61774f881fe734207f3b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: 5
+  jumpForce: 550
+--- !u!114 &7710231753624777022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5180423669895941851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 396383becd679cb469a4c1912d4ceca5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 2088848475540034461, guid: 56c9cdb00b7ff7d409f1421e587ee6c4, type: 3}
+  shootTime: 0.25
+  shootPosition: {fileID: 791823709487329312}
+--- !u!114 &4801780134871445676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5180423669895941851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ac4d5f94956cd74aab9a691e02f79d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 10
+  maxHealth: 0
 --- !u!1 &5855367923671354836
 GameObject:
   m_ObjectHideFlags: 0
@@ -425,6 +471,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dfbcd9f0d958c6940ad92ef197ff8f80, type: 3}
+--- !u!1 &791823709487329312 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3186013679366981501, guid: dfbcd9f0d958c6940ad92ef197ff8f80, type: 3}
+  m_PrefabInstance: {fileID: 2795576450467313501}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1921379195944054944 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4351037762223147005, guid: dfbcd9f0d958c6940ad92ef197ff8f80, type: 3}
