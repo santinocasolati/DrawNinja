@@ -16,7 +16,6 @@ public class EnemyChase : MonoBehaviour
         if (hit != null)
         {
             hit.ApplyDamage(damage);
-            Destroy(gameObject);
         }
     }
 

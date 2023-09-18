@@ -33,6 +33,16 @@ public class PlaneEnemy : MonoBehaviour
 
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        HealthHandler hh = collision.gameObject.GetComponent<HealthHandler>();
+
+        if (hh)
+        {
+            hh.ApplyDamage(1);
+        }
+    }
+
     private void dropBomb()
     {
         // Implementar
