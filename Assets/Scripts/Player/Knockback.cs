@@ -7,7 +7,7 @@ public class Knockback : MonoBehaviour
 {
     private bool canKnock = true;
     [SerializeField] private float currentKnockbackTime;
-    [SerializeField] private int knockTime = 3;
+    [SerializeField] private float knockTime = 3;
     private bool isKnockbacking = false;
     Collider2D col;
     [SerializeField] Animator animatorHolded;
@@ -62,10 +62,21 @@ public class Knockback : MonoBehaviour
 
             Rigidbody2D rbEnemy = collision.gameObject.GetComponent<Rigidbody2D>();
 
-            Vector2 difference = (collision.transform.position - transform.position).normalized;
-            Vector2 force = difference * kickForce;
-            rbEnemy.AddForce(force, ForceMode2D.Impulse); //if you don't want to take into consideration enemy's mass then use ForceMode.VelocityChange
-            Debug.Log("I'm kicking an enemy");
+            if (rbEnemy)
+            {
+                Vector2 difference = (collision.transform.position - transform.position).normalized;
+                Vector2 force = difference * kickForce;
+                rbEnemy.AddForce(force, ForceMode2D.Impulse);
+                //if you don't want to take into consideration enemy's mass then use ForceMode.VelocityChange
+                //Debug.Log("I'm kicking an enemy");
+
+                HealthHandler hEnemy = collision.gameObject.GetComponent<HealthHandler>();
+
+                if (hEnemy)
+                {
+                    hEnemy.ApplyDamage(1);
+                }
+            }
         }
     }
     void Update()
