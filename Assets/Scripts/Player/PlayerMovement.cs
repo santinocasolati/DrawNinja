@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private int timesJumped;
     public float jumpForce = 1f;
+    private Animator animator;
 
     void Move()
     {
@@ -19,10 +20,16 @@ public class PlayerMovement : MonoBehaviour
         if (horizontalAxis > 0)
         {
             rotation.y = 0;
+            animator.SetBool("isRunning", true);
         }
         else if (horizontalAxis < 0)
         {
             rotation.y = 180;
+            animator.SetBool("isRunning", true);
+        }
+        else
+        {
+            animator.SetBool("isRunning", false);
         }
 
         transform.rotation = Quaternion.Euler(rotation);
@@ -33,6 +40,7 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.layer == 8)
         {
             timesJumped = 0;
+            animator.SetBool("hasJumped", false);
         }
     }
 
@@ -42,25 +50,30 @@ public class PlayerMovement : MonoBehaviour
         {
             timesJumped++;
             rb.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
+            animator.SetBool("hasJumped", true);
         }
     }
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     void InputCheck()
     {
         Move();
+    }
 
+    void Update()
+    {
         if (Input.GetButtonDown("Jump"))
         {
             Jump();
         }
     }
 
-    void Update()
+    void FixedUpdate()
     {
         InputCheck();
     }

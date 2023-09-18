@@ -7,7 +7,7 @@ public class PlayerShoot : MonoBehaviour
     [SerializeField] private GameObject bulletPrefab;
     private bool canShoot = true;
     private float currentShootTime;
-    [SerializeField] private float shootTime = 0.25f;
+    [SerializeField] private float shootTime = 0.3f;
     public GameObject shootPosition;
 
     void CheckInputs()
@@ -24,6 +24,7 @@ public class PlayerShoot : MonoBehaviour
         {
             ShootReset();
         }
+
     }
 
     void Shoot()
@@ -46,5 +47,11 @@ public class PlayerShoot : MonoBehaviour
     void Update()
     {
         CheckInputs();
+    }
+
+    private void FixedUpdate()
+    {
+        //Debug.Log($"currentKnockbackTime:{(int)currentKnockbackTime}");
+        //Debug.Log($"knockTime:{knockTime}");
     }
 }

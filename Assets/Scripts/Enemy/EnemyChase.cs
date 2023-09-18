@@ -6,6 +6,8 @@ public class EnemyChase : MonoBehaviour
 {
     public float moveSpeed;
     public int damage;
+    Rigidbody2D rb;
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -21,5 +23,10 @@ public class EnemyChase : MonoBehaviour
     void Update()
     {
         transform.Translate(-transform.right * Time.deltaTime * moveSpeed);
+    }
+
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
     }
 }
