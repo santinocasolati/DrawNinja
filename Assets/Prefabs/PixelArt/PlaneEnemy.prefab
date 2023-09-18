@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 1361473470345248706}
   - component: {fileID: 1491472357}
   - component: {fileID: 1053059466}
+  - component: {fileID: 4528700}
   m_Layer: 6
   m_Name: PlaneEnemy
   m_TagString: Untagged
@@ -165,7 +166,6 @@ MonoBehaviour:
   layerPlayer:
     serializedVersion: 2
     m_Bits: 8
-  knockbackMultiplier: 50
 --- !u!114 &1053059466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -180,3 +180,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 1
   maxHealth: 0
+--- !u!114 &4528700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7700010862197923364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1834d178848ed14e97480a183aa0165, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  knockbackMultiplier: 50
+  enemyKnockback: 1

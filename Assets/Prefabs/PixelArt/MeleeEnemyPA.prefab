@@ -119,6 +119,7 @@ GameObject:
   - component: {fileID: 4780139842894968189}
   - component: {fileID: 6648742598833806398}
   - component: {fileID: 7309819564690613121}
+  - component: {fileID: 1189532919}
   m_Layer: 6
   m_Name: MeleeEnemyPA
   m_TagString: Untagged
@@ -217,3 +218,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 2
   damage: 1
+--- !u!114 &1189532919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7900552817261508722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1834d178848ed14e97480a183aa0165, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  knockbackMultiplier: 15
+  enemyKnockback: 1
