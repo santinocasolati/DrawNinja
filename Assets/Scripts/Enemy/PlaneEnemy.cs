@@ -11,7 +11,7 @@ public class PlaneEnemy : MonoBehaviour
 
 
     [SerializeField] GameObject prefabBomb;
-    [SerializeField] private float bombTime = 2f;
+    [SerializeField] private float bombTime = 4f;
     private float currentBombTime;
     private bool canBomb = true;
     public GameObject shootPosition;
