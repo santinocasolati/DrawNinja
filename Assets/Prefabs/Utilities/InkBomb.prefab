@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToExplode: 2
-  radius: 1.5
+  radius: 2.5
   explotionForce: 250
   layerMask:
     serializedVersion: 2
