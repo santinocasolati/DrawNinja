@@ -9,6 +9,14 @@ public class PlaneEnemy : MonoBehaviour
     [SerializeField] LayerMask layerPatrol;
     [SerializeField] LayerMask layerPlayer;
 
+
+    [SerializeField] GameObject prefabBomb;
+    [SerializeField] private float bombTime = 2f;
+    private float currentBombTime;
+    private bool canBomb = true;
+    public GameObject shootPosition;
+    private GameObject currentBomb;
+
     void Update()
     {
         transform.position += -transform.right * moveSpeed * Time.deltaTime;
@@ -25,10 +33,14 @@ public class PlaneEnemy : MonoBehaviour
             transform.right = transform.right * -1;
         }
 
-        if (hitPlayer)
+        if (hitPlayer && canBomb)
         {
             dropBomb();
             //Debug.Log("I'm sensing a player");
+        } 
+        else if (!canBomb)
+        {
+            resetBombTime();
         }
 
     }
@@ -45,6 +57,18 @@ public class PlaneEnemy : MonoBehaviour
 
     private void dropBomb()
     {
-        // Implementar
+        canBomb = false;
+        currentBombTime = 0;
+        Instantiate(prefabBomb, shootPosition.transform.position, Quaternion.identity);
+    }
+
+    private void resetBombTime()
+    {
+        currentBombTime += Time.deltaTime;
+
+        if (currentBombTime >= bombTime)
+        {
+            canBomb = true;
+        }
     }
 }
