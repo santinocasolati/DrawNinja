@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fe4d23c8f0ac57946968587c262e0a00
+guid: 52c30bc53aaefcf4eb0f7e323f490e92
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,85 +105,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: boss-movextended_0
+      name: boss2-idle_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 2
-        width: 58
-        height: 53
+        x: 13
+        y: 7
+        width: 39
+        height: 50
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5684d7c279d2a3347b844fac770cb032
-      internalID: -2143212158
+      spriteID: 20f9a21a7f0f1584e8381e28e6e55140
+      internalID: 1816841909
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: boss-movextended_1
+      name: boss2-idle_1
       rect:
         serializedVersion: 2
-        x: 65
-        y: 2
-        width: 58
-        height: 53
+        x: 77
+        y: 7
+        width: 39
+        height: 49
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b4859a6e9813d8940bd96d3d2dc54c86
-      internalID: -22462604
+      spriteID: d889a22f380553a4eaeb7b3577d3fbcd
+      internalID: 1398835051
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: boss-castAttack
+      name: boss2-idle_2
       rect:
         serializedVersion: 2
-        x: 129
-        y: 0
-        width: 56
-        height: 55
+        x: 141
+        y: 7
+        width: 39
+        height: 48
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d6290e699fbda804492aa9c64b592500
-      internalID: -988958240
+      spriteID: 2246d3721893e4444b287191f208458e
+      internalID: 1743981792
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: boss-movextended_3
+      name: boss2-hurt_0
       rect:
         serializedVersion: 2
-        x: 193
-        y: 2
-        width: 58
-        height: 53
+        x: 203
+        y: 7
+        width: 41
+        height: 47
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a1339b05ac8f09f41adaffc94a0edb4f
-      internalID: 1794979169
+      spriteID: c56182f8356309143a17632aac8422da
+      internalID: 1152071258
       vertices: []
       indices: 
       edges: []
@@ -199,10 +199,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      boss-castAttack: -988958240
-      boss-movextended_0: -2143212158
-      boss-movextended_1: -22462604
-      boss-movextended_3: 1794979169
+      boss2-hurt_0: 1152071258
+      boss2-idle_0: 1816841909
+      boss2-idle_1: 1398835051
+      boss2-idle_2: 1743981792
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
