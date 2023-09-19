@@ -218,6 +218,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 2
   damage: 1
+  child: {fileID: 2196291203551574223}
 --- !u!114 &1189532919
 MonoBehaviour:
   m_ObjectHideFlags: 0
