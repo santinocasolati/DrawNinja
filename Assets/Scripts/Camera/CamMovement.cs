@@ -16,4 +16,9 @@ public class CamMovement : MonoBehaviour
             transform.position = target;
         }
     }
+
+    public void setCamMoving(bool value)
+    {
+        camMoving = value;
+    }
 }

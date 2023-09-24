@@ -198,6 +198,7 @@ MonoBehaviour:
   layerPlayer:
     serializedVersion: 2
     m_Bits: 8
+  damageOnTouch: 2
   prefabBomb: {fileID: 3618382250437900201, guid: efcba8c56c1c15f4097341ef0829c183, type: 3}
   bombTime: 2
   shootPosition: {fileID: 2742752160338845896}
@@ -228,4 +229,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   knockbackMultiplier: 50
-  enemyKnockback: 1
+  enemyKnockback: 10

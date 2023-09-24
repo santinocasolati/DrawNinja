@@ -8,6 +8,7 @@ public class PlaneEnemy : MonoBehaviour
     [SerializeField] float distance = 1500;
     [SerializeField] LayerMask layerPatrol;
     [SerializeField] LayerMask layerPlayer;
+    [SerializeField] int damageOnTouch = 1;
 
 
     [SerializeField] GameObject prefabBomb;
@@ -51,7 +52,7 @@ public class PlaneEnemy : MonoBehaviour
 
         if (hh)
         {
-            hh.ApplyDamage(1);
+            hh.ApplyDamage(damageOnTouch);
         }
     }
 
