@@ -5,13 +5,14 @@ using UnityEngine;
 public class CamMovement : MonoBehaviour
 {
     [SerializeField] private Transform player;
+    public float deviationY = 1f;
     public bool camMoving = true;
 
     void Update()
     {
         if (camMoving)
         {
-            Vector3 target = new Vector3(player.position.x, transform.position.y, transform.position.z);
+            Vector3 target = new Vector3(player.position.x, player.position.y + deviationY, transform.position.z);
 
             transform.position = target;
         }
