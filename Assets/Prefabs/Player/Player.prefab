@@ -229,6 +229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: 5
+  jumpSound: {fileID: 8300000, guid: 121547072152f35458b4ff59367f061c, type: 3}
   jumpForce: 550
 --- !u!114 &7710231753624777022
 MonoBehaviour:
@@ -245,6 +246,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 2088848475540034461, guid: 56c9cdb00b7ff7d409f1421e587ee6c4, type: 3}
   shootTime: 0.5
   shootPosition: {fileID: 2473861132933846589}
+  shootSound: {fileID: 8300000, guid: 8fb2dd90d48fb374db08f024aeec1ed3, type: 3}
 --- !u!114 &4801780134871445676
 MonoBehaviour:
   m_ObjectHideFlags: 0
