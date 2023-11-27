@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
 
     private void PlayerDeathHandler()
     {
-        LoadLevel("Defeat");
+        LoadLevel("DefeatScene");
     }
 
     private void LevelCompletedHandler(string nextLevel)
@@ -63,13 +63,13 @@ public class GameManager : MonoBehaviour
 
         Level changeLevel = l[0];
 
-        SceneManager.LoadScene(changeLevel.scene.name);
+        SceneManager.LoadScene(changeLevel.index);
     }
 }
 
 [System.Serializable]
 public class Level
 {
-    public SceneAsset scene;
+    public int index;
     public string name;
 }

@@ -31,7 +31,7 @@ public class LevelManager : MonoBehaviour
 
     public void GoToMenu()
     {
-        GameManager.instance.levelCompleted.Invoke("Menu");
+        GameManager.instance.levelCompleted.Invoke("MainMenu");
     }
 
     public void NextLevel()
@@ -41,7 +41,7 @@ public class LevelManager : MonoBehaviour
             GameManager.instance.levelCompleted.Invoke("Level2");
         } else
         {
-            GameManager.instance.levelCompleted.Invoke("GameCompleted");
+            GameManager.instance.levelCompleted.Invoke("CompletedScene");
         }
     }
 }

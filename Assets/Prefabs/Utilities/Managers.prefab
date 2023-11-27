@@ -50,16 +50,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentLevel: 
   levels:
-  - scene: {fileID: 102900000, guid: c260361d104f9e54f987803f36b67f3f, type: 3}
-    name: Menu
-  - scene: {fileID: 102900000, guid: 7499888b7c6014747a7df79591aac518, type: 3}
-    name: Victory
-  - scene: {fileID: 102900000, guid: dda38d4c4844a6b4fb502031d70a1952, type: 3}
-    name: Defeat
-  - scene: {fileID: 102900000, guid: dfb9c649b99325b40851988a638bb1b2, type: 3}
+  - index: 0
+    name: MainMenu
+  - index: 5
+    name: VictoryScene
+  - index: 3
+    name: DefeatScene
+  - index: 1
     name: Level1
-  - scene: {fileID: 102900000, guid: 20fa08203b460ce47a3b4c56b56bff7c, type: 3}
+  - index: 2
     name: Level2
+  - index: 4
+    name: CompletedScene
 --- !u!114 &2581740792854308911
 MonoBehaviour:
   m_ObjectHideFlags: 0
