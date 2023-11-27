@@ -4,8 +4,17 @@ using UnityEngine;
 
 public class HealthHandler : MonoBehaviour
 {
+    public enum SpecialOptions
+    {
+        Player,
+        Boss,
+        None
+    }
+
     [SerializeField] private int health = 10;
     public int maxHealth;
+    public SpecialOptions specialOptions = SpecialOptions.None;
+    public string specialOptionsParams;
 
     private void Awake()
     {
@@ -19,7 +28,19 @@ public class HealthHandler : MonoBehaviour
         if (health <= 0)
         {
             health = 0;
-            Destroy(gameObject);
+
+            if (specialOptions == SpecialOptions.Player)
+            {
+                GameManager.instance.playerDeath.Invoke();
+            } else
+            {
+                if (specialOptions == SpecialOptions.Boss)
+                {
+                    GameManager.instance.levelCompleted.Invoke(specialOptionsParams);
+                }
+
+                Destroy(gameObject);
+            }
         }
 
         return health;
@@ -32,6 +53,8 @@ public class HealthHandler : MonoBehaviour
 
     public bool Heal(int value)
     {
+        if (specialOptions != SpecialOptions.Player) return false;
+
         bool canHeal = true;
         health += value;
         

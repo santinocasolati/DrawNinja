@@ -204,6 +204,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 3
   maxHealth: 0
+  specialOptions: 2
+  specialOptionsParams: 
 --- !u!114 &7309819564690613121
 MonoBehaviour:
   m_ObjectHideFlags: 0
