@@ -9,6 +9,9 @@ public class RedballBoss : MonoBehaviour
     [SerializeField] private float floatingSpeed;
     private Vector3 temporalPosition;
     private Vector3 staticPosition;
+    [SerializeField] private GameObject laser;
+    [SerializeField] private GameObject laserPos;
+
 
     private float currentAtackTime;
 
@@ -45,10 +48,11 @@ public class RedballBoss : MonoBehaviour
 
     private void castAttack()
     {
-        if (currentAtackTime >= attackTime)
+        if (currentAtackTime >= attackTime && gameObject)
         {
-            //animator.SetTrigger("isAttacking");
+            animator.SetTrigger("isAttacking");
             spawnLasers();
+            currentAtackTime = 0;
         }
     }
 
@@ -60,13 +64,8 @@ public class RedballBoss : MonoBehaviour
         }
     }
 
-    private void animHurt()
-    {
-
-    }
-
     private void spawnLasers()
     {
-
+        Instantiate(laser, transform.position, transform.rotation);
     }
 }
