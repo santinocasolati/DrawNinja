@@ -259,6 +259,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 10
   maxHealth: 10
+  specialOptions: 0
+  specialOptionsParams: 
 --- !u!212 &1619921194
 SpriteRenderer:
   m_ObjectHideFlags: 0
