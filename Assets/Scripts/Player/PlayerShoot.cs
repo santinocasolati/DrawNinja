@@ -9,6 +9,7 @@ public class PlayerShoot : MonoBehaviour
     private float currentShootTime;
     [SerializeField] private float shootTime = 0.3f;
     public GameObject shootPosition;
+    [SerializeField] private AudioClip shootSound;
 
     void CheckInputs()
     {
@@ -32,6 +33,7 @@ public class PlayerShoot : MonoBehaviour
         canShoot = false;
         currentShootTime = 0;
         Instantiate(bulletPrefab, shootPosition.transform.position, transform.rotation);
+        AudioManager.instance.PlaySound(shootSound);
     }
 
     void ShootReset()

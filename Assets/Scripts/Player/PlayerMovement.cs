@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float velocity;
+    [SerializeField] private AudioClip jumpSound;
 
     private Rigidbody2D rb;
     private int timesJumped;
@@ -51,6 +52,7 @@ public class PlayerMovement : MonoBehaviour
             timesJumped++;
             rb.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
             animator.SetBool("hasJumped", true);
+            AudioManager.instance.PlaySound(jumpSound);
         }
     }
 
