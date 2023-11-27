@@ -16,14 +16,24 @@ public class HealthHandler : MonoBehaviour
     public SpecialOptions specialOptions = SpecialOptions.None;
     public string specialOptionsParams;
 
-    private void Awake()
+    private void Start()
     {
         maxHealth = health;
+
+        if (specialOptions == SpecialOptions.Player)
+        {
+            ScoreManager.instance.healthChanged.Invoke(health);
+        }
     }
 
     public int ApplyDamage(int value)
     {
         health -= value;
+
+        if (specialOptions == SpecialOptions.Player)
+        {
+            ScoreManager.instance.healthChanged.Invoke(health);
+        }
 
         if (health <= 0)
         {
@@ -34,10 +44,15 @@ public class HealthHandler : MonoBehaviour
                 GameManager.instance.playerDeath.Invoke();
             } else
             {
+                int scoreAdded = 1;
+
                 if (specialOptions == SpecialOptions.Boss)
                 {
                     GameManager.instance.levelCompleted.Invoke(specialOptionsParams);
+                    scoreAdded = 10;
                 }
+
+                ScoreManager.instance.scoreChanged.Invoke(scoreAdded);
 
                 Destroy(gameObject);
             }
@@ -63,6 +78,8 @@ public class HealthHandler : MonoBehaviour
             health = maxHealth;
             canHeal = false;
         }
+
+        ScoreManager.instance.healthChanged.Invoke(health);
 
         return canHeal;
     }
