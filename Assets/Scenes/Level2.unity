@@ -1461,7 +1461,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7185817068904520761, guid: edd1be1532b09aa4a8fd372c93ba26b8, type: 3}
       propertyPath: specialOptionsParams
-      value: VictoryScene
+      value: CompletedScene
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: edd1be1532b09aa4a8fd372c93ba26b8, type: 3}

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1224907809}
   - component: {fileID: 1718425012823805855}
   - component: {fileID: 1039231217368881181}
+  - component: {fileID: 9215280223122130789}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -194,3 +195,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &9215280223122130789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7687184158055603603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 229ca9a55acd70c4aa1a4ad0899db92e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootComponent: {fileID: 0}

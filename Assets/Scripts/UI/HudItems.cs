@@ -9,9 +9,17 @@ public class HudItems : MonoBehaviour
 
     public TMP_Text health;
     public TMP_Text score;
+    public TMP_Text bullets;
 
     private void Awake()
     {
         instance = this;
+
+        BulletsManager.instance.bulletsModified += BulletsModifiedHandler;
+    }
+
+    private void BulletsModifiedHandler(int amount)
+    {
+        bullets.text = amount.ToString();
     }
 }

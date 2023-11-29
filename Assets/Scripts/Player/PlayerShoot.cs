@@ -10,6 +10,13 @@ public class PlayerShoot : MonoBehaviour
     [SerializeField] private float shootTime = 0.3f;
     public GameObject shootPosition;
     [SerializeField] private AudioClip shootSound;
+    public int bullets = 15;
+
+    private void Awake()
+    {
+        BulletsManager.instance.shootComponent = this;
+        BulletsManager.instance.AddBullets(0);
+    }
 
     void CheckInputs()
     {
@@ -30,10 +37,12 @@ public class PlayerShoot : MonoBehaviour
 
     void Shoot()
     {
+        if (bullets == 0) return;
         canShoot = false;
         currentShootTime = 0;
         Instantiate(bulletPrefab, shootPosition.transform.position, transform.rotation);
         AudioManager.instance.PlaySound(shootSound);
+        BulletsManager.instance.RemoveBullets(1);
     }
 
     void ShootReset()

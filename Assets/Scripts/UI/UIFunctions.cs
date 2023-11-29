@@ -23,4 +23,9 @@ public class UIFunctions : MonoBehaviour
     {
         LevelManager.instance.NextLevel();
     }
+
+    public void QuitApplication()
+    {
+        Application.Quit();
+    }
 }
