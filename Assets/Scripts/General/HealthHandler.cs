@@ -16,6 +16,8 @@ public class HealthHandler : MonoBehaviour
     public SpecialOptions specialOptions = SpecialOptions.None;
     public string specialOptionsParams;
 
+    [SerializeField] FloatingHPBar hpBar;
+
     private void Start()
     {
         maxHealth = health;
@@ -24,8 +26,17 @@ public class HealthHandler : MonoBehaviour
         {
             ScoreManager.instance.healthChanged.Invoke(health);
         }
+
+        if (specialOptions == SpecialOptions.Boss)
+        { 
+            hpBar.UpdateHPBar(health, maxHealth);
+        }
     }
 
+    private void Awake()
+    {
+        hpBar = GetComponentInChildren<FloatingHPBar>();
+    }
     public int ApplyDamage(int value)
     {
         health -= value;
@@ -33,6 +44,11 @@ public class HealthHandler : MonoBehaviour
         if (specialOptions == SpecialOptions.Player)
         {
             ScoreManager.instance.healthChanged.Invoke(health);
+        }
+
+        if (specialOptions == SpecialOptions.Boss)
+        {
+            hpBar.UpdateHPBar(health, maxHealth);
         }
 
         if (health <= 0)

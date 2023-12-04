@@ -11,7 +11,7 @@ public class HudItems : MonoBehaviour
     public TMP_Text score;
     public TMP_Text bullets;
 
-    private void Awake()
+    private void Start()
     {
         instance = this;
 

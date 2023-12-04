@@ -12,7 +12,7 @@ public class PlayerShoot : MonoBehaviour
     [SerializeField] private AudioClip shootSound;
     public int bullets = 15;
 
-    private void Awake()
+    private void Start()
     {
         BulletsManager.instance.shootComponent = this;
         BulletsManager.instance.AddBullets(0);
